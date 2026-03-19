@@ -83,17 +83,17 @@ The notebook will process `ParkingLot.mp4` frame by frame and write `ParkingOutp
 
 ## Configuration
 
-All tunable parameters are defined at the top of the notebook:
+TUNE THESE PARAMETERS FOR YOUR VIDEO
 
 ```python
 VIDEO_PATH = "ParkingLot.mp4"
 OUTPUT_PATH = "ParkingOutput.mp4"
 
-LAPLACIAN_THRESHOLD = 100    # Higher = stricter occupied detection
-MOTION_PIXEL_THRESHOLD = 150 # Min changed pixels to trigger motion alert
-MOG2_HISTORY = 150           # Frames used to build background model
-MOG2_VAR_THRESHOLD = 50      # MOG2 sensitivity (lower = more sensitive)
-PREVIEW_EVERY_N_FRAMES = 12  # Notebook preview frame skip (speeds up rendering)
+LAPLACIAN_THRESHOLD = 70    # Higher = stricter occupied detection
+MOTION_PIXEL_THRESHOLD = 120 # Min changed pixels to trigger motion alert
+MOG2_HISTORY = 70          # Frames used to build background model
+MOG2_VAR_THRESHOLD = 60      # MOG2 sensitivity (lower = more sensitive)
+PREVIEW_EVERY_N_FRAMES = 8  # Notebook preview frame skip (speeds up rendering)
 ```
 
 ### Tuning tips
