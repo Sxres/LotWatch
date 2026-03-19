@@ -3,7 +3,7 @@
 A computer vision system for real-time parking lot occupancy detection. LotWatch processes video footage of a parking lot, classifies each space as occupied or empty on every frame, and writes an annotated output video with colour-coded overlays and a live occupancy counter.
 
 
-![ParkingOutput](https://github.com/user-attachments/assets/864179ef-a8e1-4bc5-baf5-0ac4f5d42e4e)
+![ParkingOutput3](https://github.com/user-attachments/assets/d0f9b2ec-8072-45f1-bfde-fc6b0c61c616-0ac4f5d42e4e)
 
 ---
 
