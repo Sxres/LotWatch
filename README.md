@@ -2,6 +2,9 @@
 
 A computer vision system for real-time parking lot occupancy detection. LotWatch processes video footage of a parking lot, classifies each space as occupied or empty on every frame, and writes an annotated output video with colour-coded overlays and a live occupancy counter.
 
+
+![ParkingOutput](https://github.com/user-attachments/assets/864179ef-a8e1-4bc5-baf5-0ac4f5d42e4e)
+
 ---
 
 ## How it works
@@ -118,7 +121,7 @@ Each frame, for every polygon ROI defined in `ParkingSpots.json`:
 2. Re-run `draw_rois.py` to label spots on your new video — this overwrites `ParkingSpots.json`.
 3. Run the notebook as normal.
 
-If your video is hosted online, `yt-dlp` is included as a dependency and can be used to download it first.
+If your video is hosted online, use `yt-dlp` to download it first with ```python uv run yt-dlp -f "best[height<=720]" -o "ParkingLot.mp4" "URL".```
 
 ---
 
