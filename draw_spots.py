@@ -22,16 +22,16 @@ def draw(event, x, y):
 def render(frame):
     vis = frame.copy()
 
-    # Draw completed spots
-    for i, poly in enumerate(parking_spots):
+    
+    for i, poly in enumerate(parking_spots): # to draw completed spots
         pts = np.array(poly, np.int32).reshape((-1, 1, 2))
         cv2.polylines(vis, [pts], True, (0, 255, 255), 2)
         cx = int(np.mean([p[0] for p in poly]))
         cy = int(np.mean([p[1] for p in poly]))
         cv2.putText(vis, str(i + 1), (cx - 8, cy + 6), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 255), 2)
 
-    # Draw in-progress spot
-    for pt in current_points:
+    
+    for pt in current_points: # draw in progress spots 
         cv2.circle(vis, tuple(pt), 4, (0, 165, 255), -1)
     if len(current_points) > 1:
         for i in range(len(current_points) - 1):
