@@ -121,7 +121,7 @@ Each frame, for every polygon ROI defined in `ParkingSpots.json`:
 2. Re-run `draw_rois.py` to label spots on your new video — this overwrites `ParkingSpots.json`.
 3. Run the notebook as normal.
 
-If your video is hosted online, `yt-dlp` is included as a dependency and can be used to download it first.
+If your video is hosted online, use `yt-dlp` to download it first with ```python uv run yt-dlp -f "best[height<=720]" -o "ParkingLot.mp4" "URL".```
 
 ---
 
