@@ -28,8 +28,7 @@ def render(frame):
         cv2.polylines(vis, [pts], True, (0, 255, 255), 2)
         cx = int(np.mean([p[0] for p in poly]))
         cy = int(np.mean([p[1] for p in poly]))
-        cv2.putText(vis, str(i + 1), (cx - 8, cy + 6),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 255), 2)
+        cv2.putText(vis, str(i + 1), (cx - 8, cy + 6), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 255), 2)
 
     # Draw in-progress spot
     for pt in current_points:
