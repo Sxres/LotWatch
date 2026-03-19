@@ -3,7 +3,7 @@ import json
 import numpy as np 
 
 VIDEO_PATH = "ParkingLot.mp4"
-OUTPUT_FILE = "ParkingSpots.json"
+OUTPUT_FILE = "ParkingSpots2.json"
 
 parking_spots = []   # list of 4-point polygons [[x1,y1],[x2,y2],[x3,y3],[x4,y4]]
 current_points = []  # points for the spot being drawn
@@ -13,7 +13,7 @@ ret, frame = cap.read()
 cap.release()
 clone = frame.copy()
 
-def draw(event, x, y):
+def draw(event, x, y, flags, param):
     global current_points
 
     if event == cv2.EVENT_LBUTTONDOWN:
@@ -45,7 +45,7 @@ def render(frame):
 
 cv2.namedWindow("Draw ROIs")
 cv2.setMouseCallback("Draw ROIs", draw)
-
+    
 while True:
     cv2.imshow("Draw ROIs", render(clone))
     key = cv2.waitKey(1) & 0xFF
